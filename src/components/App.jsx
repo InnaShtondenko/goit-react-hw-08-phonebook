@@ -1,4 +1,4 @@
-import { Box } from './Box/Box.styled'; 
+import { Box } from './common/Box/Box.styled'; 
 import { ContactForm } from './Form/Form';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
