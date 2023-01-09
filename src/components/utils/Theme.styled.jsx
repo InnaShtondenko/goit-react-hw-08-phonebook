@@ -1,6 +1,7 @@
 export const theme = {
   borders: {
     small: '1px solid',
+    smallDashed: '1px dashed',
   },
   colors: {
     accentPrimary: '#1c62bc',
