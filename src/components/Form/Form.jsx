@@ -7,14 +7,14 @@ import { useState } from 'react';
 import {
   useAddContactMutation,
   useGetContactsQuery
-} from 'redux/contactsAPISlice';
+} from 'redux/slices/contactsAPISlice';
 
 import {
-    AddContactButton,
-    AddContactForm,
-    InputInfoLabel,
-    ContactInput,
-} from './Form.styled'; 
+  ButtonWideCommon,
+  FormCommon,
+  InputCommon,
+  InputInfoLabelCommon
+} from 'components/common/shared.styled'; 
 
 export function ContactForm() {
   const [name, setName] = useState('');
@@ -57,10 +57,10 @@ export function ContactForm() {
   };
 
     return (
-      <AddContactForm onSubmit={onSubmit}>
-        <InputInfoLabel>
+      <FormCommon onSubmit={onSubmit}>
+        <InputInfoLabelCommon>
           Name
-          <ContactInput
+          <InputCommon
             type="text"
             name={name}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -69,11 +69,13 @@ export function ContactForm() {
             autoFocus
             onInput={onInput}
             value={name}
-          ></ContactInput>
-        </InputInfoLabel>
-        <InputInfoLabel>
+          >
+
+          </InputCommon>
+        </InputInfoLabelCommon>
+        <InputInfoLabelCommon>
           Number
-          <ContactInput
+          <InputCommon
             type="tel"
             name={number}
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -81,14 +83,14 @@ export function ContactForm() {
             required
             onChange={onInput}
             value={number}
-          ></ContactInput>
-        </InputInfoLabel>
-        <AddContactButton
+          ></InputCommon>
+        </InputInfoLabelCommon>
+        <ButtonWideCommon
           type="submit"
           cursor="cross"
           disabled={isLoading}>
           {isLoading ? 'Saving...' : 'Add contact'}
-        </AddContactButton>
-      </AddContactForm>
+        </ButtonWideCommon>
+      </FormCommon>
     );
   }
