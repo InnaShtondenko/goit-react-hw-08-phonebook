@@ -43,7 +43,7 @@ export function Login() {
 
   return (
     <ContainerCardCommon>
-      <Box color="textColored">
+      <Box color="textColor">
         <h2>Login</h2>
 
         <FormCommon onSubmit={onSubmit}>
