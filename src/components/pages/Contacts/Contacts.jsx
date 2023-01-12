@@ -1,12 +1,14 @@
-import { ContactForm, ContactList, Filter } from 'components/AllComponents';
 
+import { ContactForm } from 'components/Form/Form';
+import { ContactList } from 'components/ContactList/ContactList';
+import { Filter } from 'components/Filter/Filter';
 import { Box } from 'components/common/Box/Box.styled';
 import { ContainerCardCommon } from 'components/common/shared.styled';
 
 export function Contacts() {
   return (
     <ContainerCardCommon>
-      <Box color="textColored">
+      <Box color="textColor">
         <h1>Phonebook</h1>
         <ContactForm />
 
@@ -15,7 +17,7 @@ export function Contacts() {
           margin="0 auto"
           mt={[4]}
           borderColor="accentSecondary"
-          color="textColoredSecondary"
+          color="textColorSecondary"
         >
           <h2>Contacts</h2>
           <Filter />
