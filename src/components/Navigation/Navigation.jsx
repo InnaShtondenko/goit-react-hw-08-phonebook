@@ -1,4 +1,4 @@
-import { useAuth } from 'redux/hooks/getAuth';
+import { useAuth } from 'redux/hooks/getAuth'; 
 
 import { ContainerFrameCommon } from 'components/common/shared.styled';
 import { HeaderLink, LinksListItem } from './Navigation.styled';
