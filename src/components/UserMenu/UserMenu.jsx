@@ -1,13 +1,12 @@
 import { useAuth } from 'redux/hooks/getAuth';
 import { useLogoutUserMutation } from 'redux/slices/usersAPISlice';
 
-import { theme } from 'utils/theme';
-import {
+import { theme } from 'components/utils/Theme.styled'; 
+import { 
   LogoutButton,
   MenuFrame,
   UserGreeting,
-  UserName,
-} from './UserMenu.styled';
+  UserName, } from './UserMenu.stuled'; 
 
 export function UserMenu() {
   const { userData } = useAuth();
@@ -16,11 +15,11 @@ export function UserMenu() {
   return (
     <MenuFrame>
       <UserGreeting>
-        Hello👋, <UserName>{userData.name}</UserName>
+        Hi, <UserName>{userData.name}</UserName>
       </UserGreeting>
       <LogoutButton
         onClick={logout}
-        bgColor={theme.colors.textColoredSecondary}
+        bgColor={theme.colors.textColorSecondary}
         hoverColor={theme.colors.warning}
       >
         Logout
