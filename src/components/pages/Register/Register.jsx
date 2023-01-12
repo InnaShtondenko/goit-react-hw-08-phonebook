@@ -43,7 +43,7 @@ export function Register() {
 
   return (
     <ContainerCardCommon>
-      <Box color="textColored">
+      <Box color="textColor">
         <h2>Register</h2>
 
         <FormCommon onSubmit={onSubmit}>
@@ -65,7 +65,7 @@ export function Register() {
             />
           </InputInfoLabelCommon>
           <ButtonWideCommon type="submit" disabled={isLoading}>
-            Register me!
+           REGISTER
           </ButtonWideCommon>
         </FormCommon>
       </Box>
