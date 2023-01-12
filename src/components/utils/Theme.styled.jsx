@@ -1,7 +1,6 @@
 export const theme = {
   borders: {
     small: '1px solid',
-    smallDashed: '1px dashed',
   },
   colors: {
     accentPrimary: '#1c62bc',
@@ -17,7 +16,7 @@ export const theme = {
   fontWeights: {
     body: 400,
     medium: 500,
-    bold: 700,
+    bold: 700, 
   },
   radius: {
     none: '0',
@@ -26,6 +25,9 @@ export const theme = {
     round: '50%',
   },
   sizes: {
+    buttons: {
+      normal: '100px',
+    },
     small: '200px',
     normal: '300px',
     wide: '500px',
