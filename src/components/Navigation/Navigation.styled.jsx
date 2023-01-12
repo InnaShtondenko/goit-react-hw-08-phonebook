@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const LinksListItem = styled.li`
   display: inline-block;
@@ -19,7 +19,7 @@ export const HeaderLink = styled(NavLink)`
     background-color ${({ theme: { transitions } }) => transitions.normal};
   &.active {
     color: ${({ theme: { colors } }) => colors.light};
-    background-color: ${({ theme: { colors } }) => colors.accent};
+    background-color: ${({ theme: { colors } }) => colors.textColor};
     &:hover {
       color: ${({ theme: { colors } }) => colors.dark};
     }
@@ -29,6 +29,6 @@ export const HeaderLink = styled(NavLink)`
     pointer-events: none;
   }
   &:hover {
-    color: ${({ theme: { colors } }) => colors.accent};
+    color: ${({ theme: { colors } }) => colors.textColor};
   }
 `;
