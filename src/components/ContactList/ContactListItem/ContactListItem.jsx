@@ -1,10 +1,11 @@
 import { PropTypes } from 'prop-types';
 
-import { Box } from 'components/Box/Box.styled';
+import { Box } from 'components/common/Box/Box.styled';
 import { theme } from 'components/utils/Theme.styled';
 
-import { useDeleteContactMutation } from 'redux/contactsAPISlice';
-import { ContactInfo, DeleteButton } from './ContactListItem.styled';
+import { useDeleteContactMutation } from 'redux/slices/contactsAPISlice';
+import { ContactInfo } from './ContactListItem.styled';
+import { InsetButtonCommon } from 'components/common/shared.styled';
 
 export function ContactListItem(
   { contactData: { name, number, id } }) {
@@ -29,13 +30,14 @@ export function ContactListItem(
       <ContactInfo>
         {name}: {number}
       </ContactInfo>
-      <DeleteButton
+      <InsetButtonCommon
         disabled={isLoading || isSuccess}
         onClick={() => deleteContactById(id)}
-        isDelete={true}
+        hoverColor={theme.colors.warning}
       >
+        
         {isLoading || isSuccess ? 'Deleting' : 'Delete'}
-      </DeleteButton>
+      </InsetButtonCommon>
     </Box>
   );
 }
